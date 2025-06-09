@@ -1,0 +1,30 @@
+<h1>If Else | Control Flow</h1>
+<!-- @if (val >=5 ) {
+    <div>
+
+    </div>
+} -->
+
+@if (display == true) {
+    <div>
+
+    </div>
+}
+
+<button (click)="hide()">Hide</button>
+<button (click)="show()">Show</button>
+<button (click)="toggle()">{{display === true? 'Hide':'Show'}}</button>
+
+<hr/>
+<button (click)="toggleDivs()">{{displayOneDiv === true? 'Show Second Div':'Show First Div'}}</button>
+@if (displayOneDiv) {
+    <div class="second">
+
+    </div>
+} @else {
+    <div class="third">
+    
+    </div>
+}
+
+

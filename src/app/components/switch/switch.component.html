@@ -1,0 +1,26 @@
+<h1>Angular Switch Case</h1>
+<button (click)="handleColor('red')">Red</button>
+<button (click)="handleColor('blue')">Blue</button>
+<button (click)="handleColor('green')">Green</button>
+<button (click)="handleColor('yellow')">Yellow</button>
+<button (click)="handleColor('')">Clear</button>
+
+<input type="text" placeholder="Enter color..." (input)="changeColor($event)">
+@switch (color) {
+     @case ('red') {
+        <h1 style="background-color: red;">Red</h1>
+     }
+     @case ('blue') {
+        <h1 style="background-color: blue;">blue</h1>
+     }
+     @case ('green') {
+        <h1 style="background-color: green;">green</h1>
+     }
+     @case ('yellow') {
+        <h1 style="background-color: yellow;">yellow</h1>
+     }
+     
+     @default {
+        <h1>color not found</h1>
+     }
+}

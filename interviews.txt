@@ -1,0 +1,7 @@
+Possibly Interview Questions
+
+1.STRUKTUR FOLDER DAN FILE
+package.json (tempat dependencies dan packages yang dipakai di project )
+gittgnore (buat mengecualikan files untuk diup ke github)
+2.MAIN.ts
+Untuk menjalankan aplikasi. menjalankan folder utama
