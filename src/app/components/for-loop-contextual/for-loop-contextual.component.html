@@ -1,0 +1,20 @@
+<h1>Contextual For Loop in Angular</h1>
+@for (user of users; track user; let e = $even; let o=$odd) {
+    <!-- @if ($first || $last) {
+        <h3 style="background-color: green;">User number {{$index}}: {{user}}</h3>
+    } @else {
+        <h3>User number {{$index}}: {{user}}</h3>
+    } -->
+
+<!-- valuenya dari 0 kemudian loncat 2 terus atau bisa dibilang genap-->
+    @if (e) { 
+        <h3 style="background-color: grey;">User nomor {{$index}} dan namanya {{user}}</h3>
+    }
+    <!-- valuenya dari 1 kemudian loncat 2 terus atau bisa dibilang ganjil -->
+@if (o) {
+    <h3 style="background-color: green;">User nomor {{$index}} dan namanya {{user}}</h3>
+}
+
+}@empty() {
+    <h4>No records found</h4>
+}

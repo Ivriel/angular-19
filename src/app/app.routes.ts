@@ -8,6 +8,9 @@ import { SignalsComponent } from './components/signals/signals.component';
 import { Signals2Component } from './components/signals2/signals2.component';
 import { ComputedSignalsComponent } from './components/computed-signals/computed-signals.component';
 import { EffectComponent } from './components/effect/effect.component';
+import { ForLoopContextualComponent } from './components/for-loop-contextual/for-loop-contextual.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { TodolistComponent } from './components/todolist/todolist.component';
 
 export const routes: Routes = [
     {
@@ -45,5 +48,17 @@ export const routes: Routes = [
     {
         path:'effect',
         component:EffectComponent
+    },
+    {
+        path:'forcontextual',
+        component:ForLoopContextualComponent
+    },
+    {
+        path:'binding',
+        component:TwoWayBindingComponent
+    },
+    {
+        path:'todo',
+        component:TodolistComponent
     }
 ];

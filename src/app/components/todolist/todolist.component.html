@@ -1,0 +1,13 @@
+<h1>TO DO List</h1>
+<input name="input" [(ngModel)]="task" type="text" placeholder="Enter task name">
+<button (click)="addTask()">Add Task</button>
+
+@for (task of tasksList; track task.id) {
+    <!-- dynamic styling berdasarkan kondisi dari completed -->
+    <h1 [style.textDecoration]="task.completed ? 'line-through' : 'none'" [style.textDecorationColor]="task.completed ? 'green' : 'none'">{{task.name}}</h1>
+    <p>Tugas:<strong>{{task.id}}</strong></p>
+    <p>Selesai: {{task.completed === false? 'belum ':'udah'}}</p>
+    <button (click)="markCompleted(task.id)">Tandai Selesai</button>
+    <button (click)="deleteTask(task.id)">Hapus</button>
+    <hr/>
+}   
