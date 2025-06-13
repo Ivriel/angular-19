@@ -1,0 +1,18 @@
+<h1>Ng Switch Directives in Angular</h1>
+
+<button (click)="changeColor('red')">Red Color</button>
+<button (click)="changeColor('blue')">Blue Color</button>
+<button (click)="changeColor('yellow')">Yellow Color</button>
+<button (click)="changeColor('green')">Green Color</button>
+<button (click)="changeColor('magenta')">Magenta Color</button>
+<button (click)="changeColor('')">No Color</button>
+
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'" style="background-color: red;">Red Color</h1>
+    <h1  *ngSwitchCase="'blue'" style="background-color: blue;">Blue Color</h1>
+    <h1  *ngSwitchCase="'yellow'" style="background-color: yellow;">Yellow Color</h1>
+    <h1  *ngSwitchCase="'green'" style="background-color: green;">Green Color</h1>
+    <h1  *ngSwitchCase="'magenta'" style="background-color: magenta;">Magenta Color</h1>
+    <h1 *ngSwitchDefault="">No Color</h1>
+</div>
+

@@ -11,6 +11,11 @@ import { EffectComponent } from './components/effect/effect.component';
 import { ForLoopContextualComponent } from './components/for-loop-contextual/for-loop-contextual.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
+import { DynamicStylingComponent } from './components/dynamic-styling/dynamic-styling.component';
+import { NgforComponent } from './components/ngfor/ngfor.component';
+import { NgifComponent } from './components/ngif/ngif.component';
+import { NgswitchComponent } from './components/ngswitch/ngswitch.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 export const routes: Routes = [
     {
@@ -60,5 +65,26 @@ export const routes: Routes = [
     {
         path:'todo',
         component:TodolistComponent
-    }
+    },
+    {
+        path:'dynamicstyle',
+        component:DynamicStylingComponent
+    },
+    {
+        path:'ngfor',
+        component:NgforComponent
+    },
+    {
+        path:'ngif',
+        component:NgifComponent
+    },
+    {
+        path:'ngswitch',
+        component:NgswitchComponent
+    },
+    {
+        path:'profile',
+        component:ProfileComponent,
+        data:{name:'Ivriel Gunawan'} // hanya work ketika akan mengoper data yang selalu sama
+   }
 ];

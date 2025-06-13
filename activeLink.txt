@@ -1,0 +1,7 @@
+pakai class active habisnya routerLinkActive. jangan lupa di styling di CSS nya 
+
+CONTOH Untuk Home
+      <!-- Mencegah link untuk home ke higtlight secara default. pakai routerlinkactive options -->
+        <a [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/">Home</a>
+kalau ga home pakai kaya biasa 
+routerLinkActive="active" routerLink="/component"

@@ -1,0 +1,18 @@
+<h1>Ng If Angular</h1>
+
+<h1 *ngIf="show">Heading 1</h1>
+
+<button (click)="toggle()">Klik</button>
+
+<h1 *ngIf="block===1">Heading 1</h1>
+<h1 *ngIf="block===2">Heading 2</h1>
+<h1 *ngIf="block===3">Heading 3</h1>
+<h1 *ngIf="block===4">Heading 4</h1>
+
+<button (click)="update()">Update Value</button>
+
+<button (click)="loginUpdate()" *ngIf="login;else elseBlock">Logout</button>
+<ng-template #elseBlock>
+    <button (click)="loginUpdate()">Login</button>
+</ng-template>
+<!-- <button (click)="loginUpdate()">{{login?'Update to Login':'Update to logout'}}</button> -->

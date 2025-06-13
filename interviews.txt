@@ -5,3 +5,7 @@ package.json (tempat dependencies dan packages yang dipakai di project )
 gittgnore (buat mengecualikan files untuk diup ke github)
 2.MAIN.ts
 Untuk menjalankan aplikasi. menjalankan folder utama
+
+DIRECTIVES
+Fitur di angular untuk membantu menyediakan power yang lebih besar untuk DOM elements
+Class additional behavior to elements in application

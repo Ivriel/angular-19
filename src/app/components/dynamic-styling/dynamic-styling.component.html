@@ -1,0 +1,7 @@
+<h1>Dynamic Styling in Angular</h1>
+
+<h1 [style.backgroundColor]="color" [style.fontSize]="fontSize">Heading Tag</h1>
+<h1 [style.fontSize]="zoom===true? fontSizeBigger:fontSize">Heading Tag 2</h1>
+<button (click)="zoomToggle()">Change Size</button>
+
+<h1 [style.fontSize.pt]="size">Heading Tag 3</h1>
