@@ -1,0 +1,15 @@
+.error {
+    color: red;
+}
+
+.form-error {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-left: 5px;
+}

@@ -1,0 +1,27 @@
+<form [formGroup]="profileData" (ngSubmit)="sendValues()">
+    <input type="text" placeholder="Enter your name" formControlName="name">
+    <!-- VALIDATION AND ERROR MESSAGE -->
+    <span *ngIf="name?.hasError('required')">This is required field</span>
+    <span class="error" *ngIf="name?.invalid &&(name?.dirty ||name?.touched)">Please enter valid name</span>
+    <br>
+
+    <input type="number" placeholder="Enter your age" formControlName="age">
+    <span *ngIf="age?.hasError('required')">This is required field</span>
+    <span *ngIf="age?.hasError('min')">Minimum age is 16</span>
+    <span class="error" *ngIf="age?.invalid &&(age?.dirty ||age?.touched)">Please enter valid age</span>
+    <br>
+
+    <input type="password" placeholder="Enter your password" formControlName="password">
+    <span *ngIf="password?.hasError('required')">This is required field</span>
+    <span class="error" *ngIf="password?.invalid &&(password?.dirty ||password?.touched)">Please enter valid password</span>
+    <br>
+
+    <input type="email" placeholder="Enter your email" formControlName="email">
+    <span *ngIf="email?.hasError('required')">This is required field</span>
+    <span class="error" *ngIf="email?.invalid &&(email?.dirty ||email?.touched)">Please enter valid email</span>
+    <br>
+
+    <!-- INVALID FORM ERROR -->
+    <h1 *ngIf="formError" class="form-error">{{formError}}</h1>
+    <button type="submit">Submit</button>
+</form>

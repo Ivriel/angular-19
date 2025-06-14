@@ -1,0 +1,12 @@
+<h1>Basic of Reactive Forms</h1>
+<input type="text" placeholder="enter name" [formControl]="name">
+<br>
+<input type="password" placeholder="enter password" [formControl]="password">
+<br>
+<input type="text" placeholder="enter email" [formControl]="email">
+<br>
+<button (click)="getValue()">Add Info</button>
+<button (click)="setValue()">Set Info</button>
+<h1>{{name.value}}</h1>
+<h1>{{password.value}}</h1>
+<h1>{{email.value}}</h1>

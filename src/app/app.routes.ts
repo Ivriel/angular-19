@@ -16,6 +16,11 @@ import { NgforComponent } from './components/ngfor/ngfor.component';
 import { NgifComponent } from './components/ngif/ngif.component';
 import { NgswitchComponent } from './components/ngswitch/ngswitch.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
+import { ReactiveFormsGroupComponent } from './components/reactive-forms-group/reactive-forms-group.component';
+import { ReactiveFormsValidationComponent } from './components/reactive-forms-validation/reactive-forms-validation.component';
+import { TemplateFormsComponent } from './components/template-forms/template-forms.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 export const routes: Routes = [
     {
@@ -86,5 +91,25 @@ export const routes: Routes = [
         path:'profile',
         component:ProfileComponent,
         data:{name:'Ivriel Gunawan'} // hanya work ketika akan mengoper data yang selalu sama
+   },
+   {
+    path:'reactiveform',
+    component:ReactiveFormsComponent
+   },
+   {
+    path:'reactiveformgroup',
+    component:ReactiveFormsGroupComponent
+   },
+   {
+    path:'reactiveformvalidation',
+    component:ReactiveFormsValidationComponent
+   },
+   {
+    path:'templateform',
+    component:TemplateFormsComponent
+   },
+   {
+    path:'**',
+    component:NotFoundComponent
    }
 ];

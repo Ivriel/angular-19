@@ -24,5 +24,4 @@ export class ProfileComponent implements OnInit{
       this.userName = data['name']
     })
   }
-
 }
