@@ -1,1 +1,22 @@
-<h1>NOT FOUND</h1>
+<h1>Template Driven Forms</h1>
+
+<form #userForm="ngForm" (ngSubmit)="addUser(userForm.value)">
+    <input type="text" placeholder="Enter your name" name="name" ngModel>
+    <br/>
+    <input type="password" placeholder="Enter your password" name="password" ngModel>
+    <br/>
+    <select name="gender" ngModel>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <br/>
+    <input type="range" name="range" ngModel>
+    <br/>
+    <button type="submit">Add user</button>
+</form>
+
+<h3>{{userData?.name}}</h3>
+<h3>{{userData?.password}}</h3>
+<h3>{{userData?.gender}}</h3>
+<h3>{{userData?.range}}</h3>

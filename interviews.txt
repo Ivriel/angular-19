@@ -9,3 +9,7 @@ Untuk menjalankan aplikasi. menjalankan folder utama
 DIRECTIVES
 Fitur di angular untuk membantu menyediakan power yang lebih besar untuk DOM elements
 Class additional behavior to elements in application
+
+NG UNTOUCHED adalah kondisi ketika input belum di klik setelah refresh
+NG INVALID adalah class kondisi ketika input yang diberi required masih kosong 
+NG DIRTY ADALAH CLASS DI KONDISI INPUT YANG DIBERI REQUIRED TELAH DIISI

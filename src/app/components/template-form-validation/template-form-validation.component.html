@@ -1,0 +1,68 @@
+<h1>Template Driven Forms Validation</h1>
+
+<form #userForm="ngForm" (ngSubmit)="submitData(userForm.value)">
+    <!-- Name field with required validation -->
+    <div>
+        <input required maxlength="50" #name="ngModel" type="text" placeholder="Enter your name" name="name" ngModel>
+        <span *ngIf="name.invalid && name.touched">
+            <span class="error" *ngIf="name.errors?.['required']">name is required</span>
+            <span class="error" *ngIf="name.errors?.['name']">Maximum length of name is 50</span>
+        </span>
+    </div>
+    <br>
+
+    <!-- Email field with email format validation -->
+    <div>
+        <input #email="ngModel" required="" type="email" placeholder="Enter your email" name="email" ngModel email>
+        <span *ngIf="email.invalid && email.touched">
+            <span class="error" *ngIf="email.errors?.['required']">Email is required</span>
+            <span class="error" *ngIf="email.errors?.['email']">Please enter a valid email</span>
+        </span>
+    </div>
+    <br>
+
+    <div>
+        <input #address="ngModel" required="" pattern="[a-zA-Z0-9\s,.-]+" type="text" placeholder="Enter your address" name="address" ngModel>
+        <span *ngIf="address.invalid && address.touched">
+            <span class="error" *ngIf="address.errors?.['required']">address is required</span>
+            <span class="error" *ngIf="address.errors?.['pattern']">Please enter a valid address</span>
+        </span>
+    </div>
+    <br>
+
+    <!-- Password field with minlength validation -->
+    <div>
+        <input #password="ngModel" required="" type="password" placeholder="Enter your password" name="password" ngModel minlength="6" maxlength="10">
+        <span *ngIf="password.invalid && password.touched">
+            <span class="error" *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength']">Password must be at least 6 characters and max 10 characters</span>
+        </span>
+    </div>
+    <br>
+
+    <!-- Age field with min/max validation
+    <div>
+        <input #age="ngModel" type="number" placeholder="Enter your age" name="age" ngModel min="18" max="100">
+        <span *ngIf="age.invalid && age.touched">
+            <span *ngIf="age.errors?.['min'] || age.errors?.['max']">Age must be between 18 and 100</span>
+        </span>
+    </div>
+    <br> -->
+
+    <select #gender="ngModel" required name="gender" ngModel>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <span class="error" *ngIf="gender.invalid && gender.touched">Please select a gender</span>
+    <br>
+
+    <button type="submit" [disabled]="userForm.invalid">Add User</button>
+</form>
+
+<!-- Form Status -->
+<div>
+    <p>Form Valid: {{userForm.valid}}</p>
+    <p>Form Invalid: {{userForm.invalid}}</p>
+    <p>Form Pristine: {{userForm.pristine}}</p>
+    <p>Form Dirty: {{userForm.dirty}}</p>
+</div>

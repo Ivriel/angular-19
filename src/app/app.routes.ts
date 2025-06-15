@@ -20,7 +20,7 @@ import { ReactiveFormsComponent } from './components/reactive-forms/reactive-for
 import { ReactiveFormsGroupComponent } from './components/reactive-forms-group/reactive-forms-group.component';
 import { ReactiveFormsValidationComponent } from './components/reactive-forms-validation/reactive-forms-validation.component';
 import { TemplateFormsComponent } from './components/template-forms/template-forms.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+import { TemplateFormValidationComponent } from './components/template-form-validation/template-form-validation.component';
 
 export const routes: Routes = [
     {
@@ -109,7 +109,7 @@ export const routes: Routes = [
     component:TemplateFormsComponent
    },
    {
-    path:'**',
-    component:NotFoundComponent
+    path:'templateformvalidation',
+    component:TemplateFormValidationComponent
    }
 ];
