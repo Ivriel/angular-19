@@ -1,0 +1,2 @@
+Tempat untuk menaruh logika atau fungsi yang bisa digunakan di banyak komponen. Memisahkan fungsi logika
+dan membuatnya reusable sehingga membuatnya lebih bersih yang tentunya menggunakan prinsin dont repeat yourself

@@ -1,10 +1,11 @@
 import { Component, OnInit, OnDestroy, PLATFORM_ID, Inject } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CurrencyConverterPipe } from '../../pipe/currency-converter.pipe';
 
 @Component({
   selector: 'app-pipes',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,CurrencyConverterPipe],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.css'
 })
@@ -13,6 +14,7 @@ export class PipesComponent implements OnInit, OnDestroy {
   name: string = 'John Doe'
   today: Date = new Date()
   amount:number = 10000
+  amountCustom:number = 100000
 
   currentTime: Date = new Date()
   private intervalId: any;

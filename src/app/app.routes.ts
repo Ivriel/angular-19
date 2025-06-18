@@ -26,6 +26,8 @@ import { ParentUserComponent } from './components/parent-user/parent-user.compon
 import { UserReuseComponent } from './components/user-reuse/user-reuse.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
+import { ServiceComponent } from './components/service/service.component';
 
 export const routes: Routes = [
     {
@@ -132,5 +134,13 @@ export const routes: Routes = [
    {
     path:'pipes',
     component:PipesComponent
+   },
+   {
+    path:'lifecycle',
+    component:LifecycleComponent
+   },
+   {
+    path:'service',
+    component:ServiceComponent
    }
 ];

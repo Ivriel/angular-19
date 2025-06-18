@@ -1,0 +1,8 @@
+<h1>Service in Angular</h1>
+
+<button (click)="getData()">Load Data</button>
+@for (item of productData; track item) {
+    <h1>{{item.name}}</h1>
+    <p>Category: {{item.category}}</p>
+    <p>Price: <strong>{{item.price | currency:'IDR ':'symbol':'1.2-2'}}</strong></p>
+}
