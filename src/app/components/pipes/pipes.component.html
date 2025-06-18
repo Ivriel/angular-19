@@ -1,0 +1,13 @@
+<h1>Pipes in Angular</h1>
+
+<h2>{{title | uppercase}}</h2>
+<h2>{{title | titlecase}}</h2>
+<h2>{{name | lowercase}}</h2>
+
+<h2>{{today | date:"fullDate"}}</h2>
+<h2>{{today | date:'hh:mm:ss'}}</h2>
+<!-- ISO code Rupiah, pakai simbol (Rp), min 1 digit sebelum koma, max 0 digit setelah koma -->
+<h2>Amount <span>{{amount | currency:'IDR':'symbol':'1.0-0' }}</span></h2>
+<!-- Ditambah Desimalnya (.00) -->
+<h2>Amount <span>{{amount | currency:'IDR':'symbol':'1.2-2' }}</span></h2>
+<h1>LIVE TIME: <span class="value">{{currentTime | date:'EEEE, dd MMM yyyy - HH:mm:ss' | uppercase}}</span></h1>

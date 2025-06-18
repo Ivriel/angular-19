@@ -1,0 +1,31 @@
+Locale string di angular itu defaultnya en-US
+kalau mau pakai rupiah Solusinya set up locale id-ID
+
+1. Import dan register locale di app.module.ts
+CONTOH SYNTAX:
+import { registerLocaleData } from '@angular/common';
+import localeId from '@angular/common/locales/id';
+
+registerLocaleData(localeId);
+
+2. Tambahkan provider LOCALE_ID
+masih di app.module.ts
+CONTOH SYNTAX:
+import { LOCALE_ID, NgModule } from '@angular/core';
+
+@NgModule({
+  // ...
+  providers: [
+    { provide: LOCALE_ID, useValue: 'id-ID' }
+  ]
+})
+export class AppModule { }
+
+3. Pakai pipe currency kaya biasa
+<!-- Akan jadi: Rp10.000,00 -->
+{{ amount | currency:'IDR':'symbol':'1.2-2' }}
+
+| Format Pipe                       | Output        |
+| --------------------------------- | ------------- |
+| `currency:'IDR':'symbol':'1.0-0'` | `Rp10.000`    |
+| `currency:'IDR':'symbol':'1.2-2'` | `Rp10.000,00` |

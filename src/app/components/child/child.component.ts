@@ -1,6 +1,5 @@
 import { Component,OnInit,Output,EventEmitter } from '@angular/core';
 
-
 @Component({
   selector: 'app-child',
   standalone:true,

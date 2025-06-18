@@ -25,6 +25,7 @@ import { UserComponent } from './components/user/user.component';
 import { ParentUserComponent } from './components/parent-user/parent-user.component';
 import { UserReuseComponent } from './components/user-reuse/user-reuse.component';
 import { ParentComponent } from './components/parent/parent.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 export const routes: Routes = [
     {
@@ -127,5 +128,9 @@ export const routes: Routes = [
    {
     path:'parent',
     component:ParentComponent
+   },
+   {
+    path:'pipes',
+    component:PipesComponent
    }
 ];
