@@ -6,7 +6,7 @@
         <input required maxlength="50" #name="ngModel" type="text" placeholder="Enter your name" name="name" ngModel>
         <span *ngIf="name.invalid && name.touched">
             <span class="error" *ngIf="name.errors?.['required']">name is required</span>
-            <span class="error" *ngIf="name.errors?.['name']">Maximum length of name is 50</span>
+            <span class="error" *ngIf="name.value?.length === 50"> Maximum length of name is 50</span>
         </span>
     </div>
     <br>

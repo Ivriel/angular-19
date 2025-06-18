@@ -1,0 +1,6 @@
+<h1>Pass Data from Child to Parent</h1>
+<app-child (getUsers)="handleUsers($event)"></app-child>
+
+@for (user of users; track user) {
+    <h1>{{user}}</h1>
+}

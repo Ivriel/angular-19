@@ -23,6 +23,8 @@ import { TemplateFormsComponent } from './components/template-forms/template-for
 import { TemplateFormValidationComponent } from './components/template-form-validation/template-form-validation.component';
 import { UserComponent } from './components/user/user.component';
 import { ParentUserComponent } from './components/parent-user/parent-user.component';
+import { UserReuseComponent } from './components/user-reuse/user-reuse.component';
+import { ParentComponent } from './components/parent/parent.component';
 
 export const routes: Routes = [
     {
@@ -117,5 +119,13 @@ export const routes: Routes = [
    {
     path:'parentuser',
     component:ParentUserComponent
+   },
+   {
+    path:'reuseuser',
+    component:UserReuseComponent
+   },
+   {
+    path:'parent',
+    component:ParentComponent
    }
 ];
