@@ -1,0 +1,9 @@
+<h1>Users API</h1>
+@for (user of users; track user) {
+    <ul>
+        <li>{{user.id}}</li>
+        <li>Nama: <strong>{{user.name}}</strong></li>
+        <li>Umur: <strong>{{user.age}}</strong></li>
+        <li>Email: <strong>{{user.email}}</strong></li>
+    </ul>
+}

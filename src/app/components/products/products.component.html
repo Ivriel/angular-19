@@ -1,0 +1,10 @@
+<h1>Products component</h1>
+    <div>
+        @for (product of products; track product) {
+            <ul>
+                <li><strong>Name: </strong><span>{{product.title}}</span></li>
+                <li><strong>Price: </strong>{{product.price | currency:'IDR':'symbol':'1.2-2' }}</li>
+                <li><img [src]="product.thumbnail" alt=""></li>
+            </ul>
+        }
+</div>

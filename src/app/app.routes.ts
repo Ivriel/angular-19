@@ -28,6 +28,8 @@ import { ParentComponent } from './components/parent/parent.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { ServiceComponent } from './components/service/service.component';
+import { ProductsComponent } from './components/products/products.component';
+import { UserApiComponent } from './components/user-api/user-api.component';
 
 export const routes: Routes = [
     {
@@ -142,5 +144,13 @@ export const routes: Routes = [
    {
     path:'service',
     component:ServiceComponent
+   },
+   {
+    path:'products',
+    component:ProductsComponent
+   },
+   {
+    path:'usersapi',
+    component:UserApiComponent
    }
 ];
