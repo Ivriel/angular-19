@@ -1,0 +1,17 @@
+<h1>Parent User Component</h1>
+<app-user [user]="userName" [city]="userCity"></app-user>
+
+<h1>For User</h1>
+<select #selectedUser (change)="changeUser(selectedUser.value)" name="" id="">
+    <option value="Ivriel">Ivriel</option>
+    <option value="Wynsc">Wynsc</option>
+    <option value="F0rgotten">F0rgotten</option>
+    <option value="Tonyk">Tonyk</option>
+</select>
+
+<h1>For City</h1>
+<select #selectedCity (change)="changeCity(selectedCity.value)" name="" id="">
+    <option value="Singosari">Singosari</option>
+    <option value="Lawang">Lawang</option>
+    <option value="Malang">Malang</option>
+</select>

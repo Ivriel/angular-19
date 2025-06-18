@@ -21,6 +21,8 @@ import { ReactiveFormsGroupComponent } from './components/reactive-forms-group/r
 import { ReactiveFormsValidationComponent } from './components/reactive-forms-validation/reactive-forms-validation.component';
 import { TemplateFormsComponent } from './components/template-forms/template-forms.component';
 import { TemplateFormValidationComponent } from './components/template-form-validation/template-form-validation.component';
+import { UserComponent } from './components/user/user.component';
+import { ParentUserComponent } from './components/parent-user/parent-user.component';
 
 export const routes: Routes = [
     {
@@ -111,5 +113,9 @@ export const routes: Routes = [
    {
     path:'templateformvalidation',
     component:TemplateFormValidationComponent
+   },
+   {
+    path:'parentuser',
+    component:ParentUserComponent
    }
 ];

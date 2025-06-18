@@ -34,8 +34,9 @@
     <div>
         <input #password="ngModel" required="" type="password" placeholder="Enter your password" name="password" ngModel minlength="6" maxlength="10">
         <span *ngIf="password.invalid && password.touched">
-            <span class="error" *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength']">Password must be at least 6 characters and max 10 characters</span>
+            <span class="error" *ngIf="password.errors?.['minlength']">Password must be at least 6 characters</span>
         </span>
+        <span class="error" *ngIf="password.value?.length === 10">Password has reached maximum length (10 characters)</span>
     </div>
     <br>
 
@@ -65,4 +66,30 @@
     <p>Form Invalid: {{userForm.invalid}}</p>
     <p>Form Pristine: {{userForm.pristine}}</p>
     <p>Form Dirty: {{userForm.dirty}}</p>
+</div>
+
+<!-- OUTPUT FORM DATA -->
+<div class="form-data" *ngIf="isSubmitted">
+    <h2>Submitted Form Data:</h2>
+    <div class="data-item">
+        <strong>Name:</strong> {{userForm.value?.name}}
+    </div>
+    <div class="data-item">
+        <strong>Email:</strong> {{userForm.value?.email}}
+    </div>
+    <div class="data-item">
+        <strong>Address:</strong> {{userForm.value?.address}}
+    </div>
+    <div class="data-item">
+        <strong>Password:</strong> {{userForm.value?.password}}
+    </div>
+    <div class="data-item">
+        <strong>Gender:</strong> {{userForm.value?.gender}}
+    </div>
+</div>
+
+<!-- Raw Form Data (for debugging) -->
+<div class="raw-data">
+    <h3>Raw Form Data:</h3>
+    <pre>{{userForm.value | json}}</pre>
 </div>

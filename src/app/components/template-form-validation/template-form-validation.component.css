@@ -1,3 +1,36 @@
 .error {
     color: red;
 }
+
+.form-data {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.data-item {
+    margin: 10px 0;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.data-item strong {
+    color: #333;
+    margin-right: 10px;
+}
+
+.raw-data {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.raw-data pre {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    overflow-x: auto;
+}

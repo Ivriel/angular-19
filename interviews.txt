@@ -13,3 +13,11 @@ Class additional behavior to elements in application
 NG UNTOUCHED adalah kondisi ketika input belum di klik setelah refresh
 NG INVALID adalah class kondisi ketika input yang diberi required masih kosong 
 NG DIRTY ADALAH CLASS DI KONDISI INPUT YANG DIBERI REQUIRED TELAH DIISI
+
+PARENT AND CHILD COMPONENT
+
+parent component
+Komponent yang mewadahi komponen lain
+
+child component
+adalah komponen yang berada di dalam parent komponen
