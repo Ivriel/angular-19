@@ -1,12 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { UsersService } from '../../services/users.service';
+import { Users } from '../../interfaces/User';
 
-export interface Users {
-  id:number;
-  name:string;
-  age:number;
-  email:string
-}
 @Component({
   selector: 'app-user-api',
   standalone:true,
