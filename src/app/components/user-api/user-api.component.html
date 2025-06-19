@@ -1,9 +1,20 @@
 <h1>Users API</h1>
-@for (user of users; track user) {
+<form #userForm="ngForm" (ngSubmit)="addOrUpdateUser(userForm.value,userForm)">
+    <input type="text" placeholder="Enter name..." name="name" [ngModel]="selectedUser?.name">
+    <br>
+    <input type="email" placeholder="Enter email..." name="email" [ngModel]="selectedUser?.email">
+    <br>
+    <input type="number" placeholder="Enter yout age..." name="age" [ngModel]="selectedUser?.age">
+    <br>
+    <button type="submit">{{!selectedUser?'Add user':'Update User'}}</button>
+</form>
+@for (user of users; track user.id) {
     <ul>
         <li>{{user.id}}</li>
         <li>Nama: <strong>{{user.name}}</strong></li>
         <li>Umur: <strong>{{user.age}}</strong></li>
         <li>Email: <strong>{{user.email}}</strong></li>
+        <li><button (click)="deleteUser(user.id)">Delete</button></li>
+        <li><button (click)="selectUser(user.id)">Update</button></li>
     </ul>
 }

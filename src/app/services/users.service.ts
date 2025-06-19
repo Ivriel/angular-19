@@ -13,4 +13,20 @@ export class UsersService {
   getUsers():Observable<Users[]>{ 
     return this.http.get<Users[]>(this.apiUrl)
   }
+
+  saveUser(user:Users):Observable<Users>{
+    return this.http.post<Users>(this.apiUrl,user)
+  }
+
+  deleteUser(id:string):Observable<Users>{
+    return this.http.delete<Users>(this.apiUrl+"/"+id)
+  }
+
+  getSelectedUser(id:string):Observable<Users>{
+    return this.http.get<Users>(this.apiUrl+"/"+id)
+  }
+
+  updateUser(id:string, user:Users):Observable<Users> {
+    return this.http.put<Users>(this.apiUrl+"/"+id,user)
+  }
 }
