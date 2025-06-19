@@ -30,6 +30,7 @@ import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { ServiceComponent } from './components/service/service.component';
 import { ProductsComponent } from './components/products/products.component';
 import { UserApiComponent } from './components/user-api/user-api.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 export const routes: Routes = [
     {
@@ -152,5 +153,9 @@ export const routes: Routes = [
    {
     path:'usersapi',
     component:UserApiComponent
-   }
+   },
+   {
+    path:'admin',
+    loadComponent:()=>import('./components/admin/admin.component').then(c=>c.AdminComponent) // penerapan lazy loading
+   },
 ];
